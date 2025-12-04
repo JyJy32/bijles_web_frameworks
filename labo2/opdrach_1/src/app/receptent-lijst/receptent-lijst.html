@@ -1,0 +1,17 @@
+@if (recepten.length == 0) {
+  <p>Empty</p>
+} @else {
+<ul>
+  @for (recept of recepten; track recept.id) {
+  <li style="display: inline">
+    <app-receptent-kaart [title]=recept.titel [duration]=recept.tijd></app-receptent-kaart>
+    <div style="display: flex;">
+      @for (label of recept.labels; track $index) {
+      <app-label [text]=label></app-label><p>,</p>
+      }
+    </div>
+  </li>
+  }
+</ul>
+
+}

@@ -1,0 +1,11 @@
+<input type="text" [(ngModel)]="nieuw">
+<button (click)=Add()>Voeg taak toe</button>
+
+<ul>
+  @for (t of tasks; track t.id) {
+  <li>
+    <h2>{{ t.titel }}</h2>
+    <button (click)="removeTask(t.id)">X</button>
+  </li>
+  }
+</ul>
