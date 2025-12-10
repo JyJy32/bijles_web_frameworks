@@ -1,0 +1,6 @@
+<div style="display: flex; flex-direction: column;">
+  @for (gebruiker of gebruikers; track gebruiker.id) {
+
+  <a href="/gebruiker/{{gebruiker.id}}"> {{gebruiker.naam}}</a>
+  }
+</div>

@@ -1,18 +1,16 @@
 @switch (huidige) {
-@case (vragen.length) {
-<p>eind resultaat = {{score}}/{{vragen.length}}</p>
-}
-@default {
-<h2>{{vragen[huidige].vraag}}</h2>
-<input type="text" [(ngModel)]=answer>
-<button (click)=submit()> Submit </button>
+  @case (vragen.length) {
+    <p>eind resultaat = {{score}}/{{vragen.length}}</p>
+  }
+  @default {
+    <h2>{{vragen[huidige].vraag}}</h2>
+    <input type="text" [(ngModel)]=answer>
+    <button (click)=submit()> Submit </button>
 
-@if (!correct) {
-<p>Fout!</p>
-}
-
-
-}
+    @if (!correct) {
+    <p>Fout!</p>
+    }
+  }
 
 }
 
